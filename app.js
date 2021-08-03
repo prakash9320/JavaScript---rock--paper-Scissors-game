@@ -59,15 +59,6 @@ const startGameBtn = document.getElementById('start-game-btn');
                  cChoice  === PAPER && pChoice === SCISSORS,
                   cChoice=== SCISSORS && pChoice === ROCK 
                  ) ? RESULT_COMPUTER_WIN :RESULT_COMPUTER_WIN ; 
-    
-    
-    // if(cChoice ===pChoice){
-            //  return  RESULR_DRAW;
-            // }else if{
-            //             return RESULT_PLAYER_WIN;
-            // }else{
-            //   return RESULT_COMPUTER_WIN;
-            // }
   }
 
  startGameBtn.addEventListener('click',() => {
