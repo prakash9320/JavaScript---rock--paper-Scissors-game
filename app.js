@@ -84,12 +84,13 @@ const startGameBtn = document.getElementById('start-game-btn');
   // console.log(playerSelection); 
    const ComputerChoice = getPlayerChoice();
    const winner = getWinner( ComputerChoice,playerChoice);   
-    let mesaage = `You picked ${playerChoice}, computer picked ${ComputerChoice} there for you had a draw .`; 
+    let message = `You picked ${playerChoice}, computer picked ${ComputerChoice} there for you had a draw .`; 
    if(winner === RESULT_DRAW){
-       mesaage = message + 'Draw';
+       message = message + 'Draw';
       }else if(winner === RESULT_PLAYER_WIN){
            message = message + 'Won';
       }else{
         message = message + 'Lost.';
       }
+       alert(message);
  });
