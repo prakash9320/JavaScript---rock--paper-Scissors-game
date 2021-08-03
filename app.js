@@ -54,11 +54,24 @@ const startGameBtn = document.getElementById('start-game-btn');
   };
 
   const getWinner = (cChoice,pChoice) => {
-             return cChoice === pChoice ? RESULT_DRAW :  (
+             return cChoice === pChoice ? RESULT_DRAW : (
                  cChoice === ROCK && pChoice === PAPER ||
                  cChoice  === PAPER && pChoice === SCISSORS,
-                  cChoice=== SCISSORS && pChoice === ROCK 
-                 ) ? RESULT_COMPUTER_WIN :RESULT_COMPUTER_WIN ; 
+                 cChoice=== SCISSORS && pChoice === ROCK 
+                 ) ? RESULT_PLAYER_WIN : RESULT_COMPUTER_WIN  
+    
+    
+    // if(cChoice ===pChoice){
+            //  return  RESULR_DRAW;
+            // }else if(
+            //   cChoice === ROCK && pChoice === PAPER ||
+            //   cChoice  === PAPER && pChoice === SCISSORS,
+            //    cChoice=== SCISSORS && pChoice === ROCK 
+            //   ){
+            //             return RESULT_PLAYER_WIN;
+            // }else{
+            //   return RESULT_COMPUTER_WIN;
+            // }
   }
 
  startGameBtn.addEventListener('click',() => {
