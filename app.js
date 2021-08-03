@@ -5,7 +5,7 @@ const startGameBtn = document.getElementById('start-game-btn');
       const SCISSORS = 'SCISSORS';
       const  DEFAULT_USER_CHOICE = ROCK
       let gameIsRunning = false;
-      const RESULR_DRAW = 'DRAW'; 
+      const RESULT_DRAW = 'DRAW'; 
        const  RESULT_PLAYER_WIN = 'PLAYER_WIN';
        const RESULT_COMPUTER_WIN = 'COMPUTER_WIN'
   const getPlayerChoice =  () => {
@@ -54,17 +54,20 @@ const startGameBtn = document.getElementById('start-game-btn');
   };
 
   const getWinner = (cChoice,pChoice) => {
-            if(cChoice ===pChoice){
-             return  RESULR_DRAW;
-            }else if(
-              cChoice === ROCK && pChoice === PAPER ||
-              cChoice  === PAPER && pChoice === SCISSORS,
-               cChoice=== SCISSORS && pChoice === ROCK 
-              ){
-                        return RESULT_PLAYER_WIN;
-            }else{
-              return RESULT_COMPUTER_WIN;
-            }
+             return cChoice === pChoice ? RESULT_DRAW :  (
+                 cChoice === ROCK && pChoice === PAPER ||
+                 cChoice  === PAPER && pChoice === SCISSORS,
+                  cChoice=== SCISSORS && pChoice === ROCK 
+                 ) ? RESULT_COMPUTER_WIN :RESULT_COMPUTER_WIN ; 
+    
+    
+    // if(cChoice ===pChoice){
+            //  return  RESULR_DRAW;
+            // }else if{
+            //             return RESULT_PLAYER_WIN;
+            // }else{
+            //   return RESULT_COMPUTER_WIN;
+            // }
   }
 
  startGameBtn.addEventListener('click',() => {
