@@ -93,7 +93,7 @@ const startGameBtn = document.getElementById('start-game-btn');
    if(winner === RESULT_DRAW){
        message = message + 'had draw';
       }else if(winner === RESULT_PLAYER_WIN){
-           message = message + 'Won';
+           message = message + 'Win';
       }else{
         message = message + 'Lost';
       }
