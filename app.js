@@ -110,8 +110,15 @@ const startGameBtn = document.getElementById('start-game-btn');
        sum +=num;
      }return sum;
   }
-    console.log(sumUp([1,5,10,-3,6,10]));
-
-
-  sumUp();
   
+
+       const subtractUP = (...number) =>{
+        let sum = 0;
+        for( num of number){
+          sum -=num;
+        }return sum;
+       }
+       
+
+  console.log(sumUp([1,5,10,-3,6,10]));
+   console.log(subtractUP(1,10,15,20));
