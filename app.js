@@ -103,22 +103,31 @@ const startGameBtn = document.getElementById('start-game-btn');
 
 
  // not related to the game
+       
+  const sumUp = (...number)=>{
+        const validateNumber = () => {
+          
+            return isNaN(number) ? 0 : number;
+        };
 
-  const sumUp = (number)=>{
     let sum = 0;
      for( num of number){
-       sum +=num;
-     }return sum;
+       sum +=validateNumber(num);
+     }return(sum);
   }
-  
-
        const subtractUP = (...number) =>{
         let sum = 0;
         for( num of number){
           sum -=num;
-        }return sum;
-       }
-       
 
-  console.log(sumUp([1,5,10,-3,6,10]));
+        }
+        return sum;
+       }
+        
+
+      //  const showResult = () => {
+      //       alert('the result after adding all number is: ')
+      //  }
+
+  console.log(sumUp(1,5,10,-3,6,10));
    console.log(subtractUP(1,10,15,20));
