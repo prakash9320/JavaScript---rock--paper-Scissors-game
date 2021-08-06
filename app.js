@@ -136,3 +136,23 @@ const startGameBtn = document.getElementById('start-game-btn');
   console.log(sumUp(showResult,1,5,10,-3,6,10));
   console.log(sumUp(showResult,1,5,10,-3,6,10,25,88));
    console.log(subtractUP(1,10,15,20));
+
+
+   // CallBack Function Example 
+
+   const person = {
+    fullName: function() {
+      return this.firstName + " " + this.lastName;
+    }
+  }
+  const person1 = {
+    firstName:"John",
+    lastName: "Doe"
+  }
+  const person2 = {
+    firstName:"Mary",
+    lastName: "Doe"
+  }
+  
+  // This will return "John Doe":
+  person.fullName.call(person1);
