@@ -104,20 +104,20 @@ const startGameBtn = document.getElementById('start-game-btn');
 
  // not related to the game
        
-  const sumUp = (...number)=>{
-        const validateNumber = () => {
-          
+  const sumUp = (resultHandler,...number)=>{
+        const validateNumber = (number) => {
+           
             return isNaN(number) ? 0 : number;
         };
 
     let sum = 0;
      for( num of number){
        sum +=validateNumber(num);
-     }return(sum);
-  }
+     } resultHandler(sum);
+  };
        const subtractUP = (...number) =>{
         let sum = 0;
-        for( num of number){
+        for(const num of number){
           sum -=num;
 
         }
@@ -129,5 +129,10 @@ const startGameBtn = document.getElementById('start-game-btn');
       //       alert('the result after adding all number is: ')
       //  }
 
-  console.log(sumUp(1,5,10,-3,6,10));
+     const showResult = (result) =>{
+       alert('The result after adding alll numbers is: '+ result)
+     };
+
+  console.log(sumUp(showResult,1,5,10,-3,6,10));
+  console.log(sumUp(showResult,1,5,10,-3,6,10,25,88));
    console.log(subtractUP(1,10,15,20));
