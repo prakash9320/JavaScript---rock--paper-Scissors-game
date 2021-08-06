@@ -133,8 +133,8 @@ const startGameBtn = document.getElementById('start-game-btn');
        alert('The result after adding alll numbers is: '+ result)
      };
 
-  console.log(sumUp(showResult,1,5,10,-3,6,10));
-  console.log(sumUp(showResult,1,5,10,-3,6,10,25,88));
+  sumUp(showResult,1,5,10,-3,6,10);
+    sumUp(showResult,1,5,10,-3,6,10,25,88);
    console.log(subtractUP(1,10,15,20));
 
 
