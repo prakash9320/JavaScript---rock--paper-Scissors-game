@@ -111,17 +111,18 @@ const startGameBtn = document.getElementById('start-game-btn');
         };
 
     let sum = 0;
+      
      for( num of number){
        sum +=validateNumber(num);
-     } resultHandler(sum);
+     } resultHandler(sum,'The result after adding all Numbers is');
   };
-       const subtractUP = (...number) =>{
+       const subtractUP = (resultHandler,...number) =>{
         let sum = 0;
         for(const num of number){
           sum -=num;
 
         }
-        return sum;
+         resultHandler(sum);
        }
         
 
@@ -129,13 +130,13 @@ const startGameBtn = document.getElementById('start-game-btn');
       //       alert('the result after adding all number is: ')
       //  }
 
-     const showResult = (result) =>{
-       alert('The result after adding alll numbers is: '+ result)
+     const showResult = (result,messageText) =>{
+       alert( messageText+' '+ result)
      };
 
   sumUp(showResult,1,5,10,-3,6,10);
     sumUp(showResult,1,5,10,-3,6,10,25,88);
-   console.log(subtractUP(1,10,15,20));
+     subtractUP(showResult,1,10,15,20);
 
 
    // CallBack Function Example 
@@ -155,4 +156,4 @@ const startGameBtn = document.getElementById('start-game-btn');
   }
   
   // This will return "John Doe":
-  person.fullName.call(person1);
+  console.log(person.fullName.call(person1));
